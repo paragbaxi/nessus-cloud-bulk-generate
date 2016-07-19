@@ -342,6 +342,7 @@ logger.debug('Start')
 if args.upload:
     config = configparser.ConfigParser()
     config.read('nessus_cloud.cfg')
+    baseurl = config.get("Nessus Cloud", "host")
     username = config.get("Nessus Cloud", "username")
     password = config.get("Nessus Cloud", "password")
     if not (username and password):
@@ -349,7 +350,6 @@ if args.upload:
     # Capture cookies.
     session = requests.Session()
     # Set up request.
-    baseurl = "https://dswx-preview.svc.nessus.org"
     url = baseurl + "/session"
     data = {'username':username, 'password':password}
     # Make request.
