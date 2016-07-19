@@ -2,7 +2,7 @@
 Be able to generate .nessus files that contains thousands of hosts with a variety of vulnerabilities and configurations.
 
 # Why
-Be able to migrate large existing .nessus files to Nessus Cloud.
+Be able to test speeds of Nessus Cloud API.
 
 # How it reads real data
 1. Use real XML .nessus vuln data.
